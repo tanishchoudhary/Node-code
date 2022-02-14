@@ -20,4 +20,4 @@ jobs:
     - run: echo "hello"
 
   call-workflow-passing-data:
-    uses: ./test/.github/workflows/test.yml
+    uses: ./Node-code/test/.github/workflows/test.yml
