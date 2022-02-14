@@ -20,4 +20,4 @@ jobs:
     - run: echo "hello"
 
   call-workflow-passing-data:
-    uses: ./test/.github/workflows/test.yml@main
+    uses: tanishchoudhary/simple-java-maven-app/.github/workflows/env.yml@tanishchoudhary-yoyo_1
