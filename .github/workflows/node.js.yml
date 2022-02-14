@@ -19,3 +19,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: echo "hello"
+
+  call-workflow-passing-data:
+    uses: tanishchoudhary/simple-java-maven-app/.github/workflows/sync.yml@master
