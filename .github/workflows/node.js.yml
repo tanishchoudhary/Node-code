@@ -21,4 +21,4 @@ jobs:
     - run: echo "hello"
 
   call-workflow-passing-data:
-    uses: tanishchoudhary/simple-java-maven-app/.github/workflows/sync.yml@master
+    uses: tanishchoudhary/simple-java-maven-app/.github/workflows/sync.yml@tanishchoudhary-yoyo_1
