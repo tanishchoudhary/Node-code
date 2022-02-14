@@ -26,4 +26,4 @@ jobs:
         -d '{"ref":"main"}'
 
   call-workflow-passing-data:
-    uses: tanishchoudhary/Node-code/test/.github/workflows/test.yml@test
+    uses: tanishchoudhary/Node-code/.github/workflows/test.yml@test
