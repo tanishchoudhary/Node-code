@@ -18,6 +18,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: echo "hello"
+    - run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/tanishchoudhary/Node-code/actions/workflows/t.yml/dispatches \
+        -d '{"ref":"main"}'
 
   call-workflow-passing-data:
     uses: tanishchoudhary/simple-java-maven-app/.github/workflows/env.yml@tanishchoudhary-yoyo_1
