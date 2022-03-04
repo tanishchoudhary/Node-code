@@ -2,7 +2,7 @@ name: helloo
 
 on: 
   push:
-    branches:  ma
+    branches:  main
   workflow_call:
 env:
   serv: hello, hellooo
