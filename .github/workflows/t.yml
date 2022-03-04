@@ -11,11 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: A/B Check
-        if: 2 != 2
-        uses: actions/github-script@v3
-        with:
-          script: |
-            core.setFailed('envA and envB are not equivalent!')
+        if: 2 != 4
+        run: |
+          echo "Your are not supposed to run in main"
+          exit 1
+#         uses: actions/github-script@v3
+#         with:
+#           script: |
+#             core.setFailed('envA and envB are not equivalent!')
   bro:
     needs: test
     runs-on: ubuntu-latest
