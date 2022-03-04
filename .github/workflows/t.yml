@@ -11,12 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: A/B Check
-        if: 2 != 4
+        if: 2 != 2
         uses: actions/github-script@v3
         with:
           script: |
             core.setFailed('envA and envB are not equivalent!')
   bro:
+    needs: test
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}   
