@@ -1,6 +1,6 @@
 
 try:
-    input()
+    name = input()
     print(name)
 except:
     print("EOF")
