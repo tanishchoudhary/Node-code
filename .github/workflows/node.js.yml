@@ -16,7 +16,8 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    
+    - name : cehcout
+      uses: actions/checkout@v2
     - run: python name.py tanish
     
 
