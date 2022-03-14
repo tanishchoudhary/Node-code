@@ -1,1 +1,2 @@
-print($1)
+name = input("name")
+print(name)
