@@ -4,7 +4,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: mai
+    branches: main
   
 
 jobs:
@@ -16,14 +16,8 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
-    - run: echo "hello"
-    - run: |
-        curl \
-        -X POST \
-        -H "Accept: application/vnd.github.v3+json" \
-          https://api.github.com/repos/tanishchoudhary/Node-code/actions/workflows/t.yml/dispatches \
-        -d '{"ref":"main"}'
+    
+    - run: python name.py tanish
+    
 
-  call-workflow-passing-data:
-    uses: tanishchoudhary/Node-code/.github/workflows/test.yml@test
+ 
