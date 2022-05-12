@@ -1,6 +1,6 @@
 # This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-wi
-name: Node.js CI
+name: Node.js
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       firstoutput-test: ${{ steps.call.outputs.firstoutput }}
   
   calling:
-    uses: tanishchoudhary/newone/.github/worflows/env.yml@main
+    uses: tanishchoudhary/newone/.github/workflows/env.yml@main
     needs: build
     with:
       firstoutput-test: ${{ needs.build.outputs.firstoutput-test }}  
