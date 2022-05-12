@@ -6,19 +6,26 @@ on:
   push:
     branches: main
   
-
+env:
+  test: 'true'
 jobs:
   build:
 
     runs-on: ubuntu-latest
-
-    
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-    - name : cehcout
-      uses: actions/checkout@v2
-    - run: python name.py tanish
+    - name : input
+      id: call
+      run: |
+        echo "::set-output name=firstoutput::${{ env.test }}"
+    outputs:
+      firstoutput-test: ${{ steps.call.outputs.firstoutput }}
+  
+  calling:
+    uses: tanishchoudhary/newone/.github/worflows/env.yml@main
+    needs: build
+    with:
+      firstoutput-test: ${{ needs.build.outputs.firstoutput-test }}  
+    
     
 
  
