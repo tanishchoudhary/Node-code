@@ -5,9 +5,10 @@ name: Node.js
 on:
   push:
     branches: main
+  workflow_dispatch:
   
 env:
-  test: 'false'
+  test: 'true'
 jobs:
   build:
 
