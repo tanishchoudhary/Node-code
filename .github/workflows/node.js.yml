@@ -26,7 +26,13 @@ jobs:
     with:
       firstoutput-test: ${{ needs.build.outputs.firstoutput-test }}  
     
+  
   check:
+    runs-on: ubuntu-latest
+    needs: calling
+    steps:
+      - run: echo ${{ needs.env.outputs.second_output }}
+  check-true:
     runs-on: ubuntu-latest
     needs: calling
     if: ${{ needs.env.outputs.second_output == 'true' }}
