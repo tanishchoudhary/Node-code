@@ -36,14 +36,14 @@ jobs:
   check-true:
     runs-on: ubuntu-latest
     needs: calling
-    if: ${{ needs.calling.outputs.second_output == 'true' }}
+    if: always() && ${{ needs.calling.outputs.second_output == 'true' }}
     steps:
       - run: echo "true"
   
   check-false:
     runs-on: ubuntu-latest
     needs: calling
-    if: ${{ needs.calling.outputs.second_output == 'false' }}
+    if: always() && ${{ needs.calling.outputs.second_output == 'false' }}
     steps:
       - run: echo "false"
 
