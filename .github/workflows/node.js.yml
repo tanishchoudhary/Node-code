@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: calling
     if: |
-      always() && ${{ needs.calling.outputs.second_output == 'true' }}
+       ${{ needs.calling.outputs.second_output == 'true' }}
     steps:
       - run: echo "true"
   
@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: calling
     if: |
-        always() && ${{ needs.calling.outputs.second_output == 'false' }}
+        ${{ needs.calling.outputs.second_output == 'false' }}
     steps:
       - run: echo "false"
 
